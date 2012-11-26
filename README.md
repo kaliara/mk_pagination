@@ -1,5 +1,5 @@
 ### Demo
-View some [demos(http://kaliara.github.com/mk_pagination)]
+View some [demos](http://kaliara.github.com/mk_pagination)
 
 ### Overview
 Custom written pagination jQuery plugin includes the following features:

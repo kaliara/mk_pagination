@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+    <title>mk_pagination by kaliara</title>
+
+    <link rel="stylesheet" href="stylesheets/github_pages.css">
+    <link rel="stylesheet" href="stylesheets/pagination.css" type="text/css" media="screen" charset="utf-8" />
+    
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>mk pagination</h1>
+        <p>animated pagination component</p>
+
+        <ul>
+          <li><a href="https://github.com/kaliara/mk_pagination/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/kaliara/mk_pagination/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/kaliara/mk_pagination">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      
+      <section>
+        <h3>Overview</h3>
+        <p>Custom written pagination jQuery plugin includes the following features:</p>
+        <ul>
+          <li>simple animations</li>
+          <li>initialize multiple paginators with a single call</li>
+          <li>supports unlimited pages (doesn't create unnecessary divs)</li>
+          <li>custom callback function</li>
+          <li>multi-language ready</li>
+          <li>legacy browser support (IE7+, FF, Chrome)</li>
+        </ul>
+        
+        <br><br>
+        
+        <h3>Requirements</h3>
+        <ul>
+          <li>jQuery 1.7.2+</li>
+          <li style="text-decoration: line-through">intelligence</li>
+        </ul>
+        
+        <br><br>
+
+        <h3>Usage</h3>
+        <pre><code>$('#pagination_top, #pagination_bottom').mkPaginate(
+  {
+    total_pages: 10, 
+    callback: gotoPage
+  }
+);</code></pre>
+
+        <br><br>
+        
+        <h3>Demos</h3>
+        <p>The following demos use the <strong>logPage</strong> function as a callback. Please view the console log in Firefox or Chrome to see the results of the callback. Nothing will show up in Internet Explorer.</p>
+        
+        <h4>Zero Pages</h4>
+        <pre><code>$('#demo1').mkPaginate({ total_pages: 0, callback: logPage });</code></pre>
+        <div id="demo1" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>One Page</h4>
+        <pre><code>$('#demo2').mkPaginate({ total_pages: 1, callback: logPage });</code></pre>
+        <div id="demo2" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Two Pages</h4>
+        <pre><code>$('#demo3').mkPaginate({ total_pages: 2, callback: logPage });</code></pre>
+        <div id="demo3" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Five Pages</h4>
+        <pre><code>$('#demo4').mkPaginate({ total_pages: 5, callback: logPage });</code></pre>
+        <div id="demo4" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Ten Pages</h4>
+        <pre><code>$('#demo5').mkPaginate({ total_pages: 10, callback: logPage });</code></pre>
+        <div id="demo5" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Twenty Pages</h4>
+        <pre><code>$('#demo6').mkPaginate({ total_pages: 20, callback: logPage });</code></pre>
+        <div id="demo6" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Translations</h4>
+        <pre><code>$('#demo7').mkPaginate({ total_pages: 10, next_translation: 'suivant', previous_translation: 'précédent', callback: logPage });</code></pre>
+        <div id="demo7" class="pagination clearfix"></div>
+        <br><br>
+
+        <h4>Different Start Page</h4>
+        <pre><code>$('#demo8').mkPaginate({ total_pages: 10, current_page: 5, callback: logPage });</code></pre>
+        <div id="demo8" class="pagination clearfix"></div>
+        <br><br>
+      </section>
+
+      <footer>
+        <p>Created by <a href="https://github.com/kaliara">kaliara</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://github.com/kaliara/mk_pagination/raw/master/pagination.js"></script>
+    <script src="javascripts/scale.fix.js"></script>
+
+    <script>
+      function logPage(page) {
+        console.log("Navigating to page " + page + ". Excellent choice!");
+      }
+      
+      $('#demo1').mkPaginate({ total_pages: 0, callback: logPage });
+      $('#demo2').mkPaginate({ total_pages: 1, callback: logPage });
+      $('#demo3').mkPaginate({ total_pages: 2, callback: logPage });
+      $('#demo4').mkPaginate({ total_pages: 5, callback: logPage });
+      $('#demo5').mkPaginate({ total_pages: 10, callback: logPage });
+      $('#demo6').mkPaginate({ total_pages: 20, callback: logPage });
+      $('#demo7').mkPaginate({ total_pages: 10, next_translation: 'suivant', prev_translation: 'précédent', callback: logPage });
+      $('#demo8').mkPaginate({ total_pages: 10, current_page: 5, callback: logPage });
+    </script>
+
+  </body>
+</html>

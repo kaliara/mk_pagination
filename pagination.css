@@ -1,0 +1,124 @@
+.pagination {
+  clear: right;
+  font-family: Arial;
+  font-size: 12px;
+  margin: 0 2px;
+}
+.pagination .next_page,
+.pagination .prev_page {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  color: #CF2A10;
+  cursor: pointer;
+  float: left;
+  font-size: 110%;
+  font-weight: bold;
+  line-height: 175%;
+  margin: 0;
+  padding: 0;
+  text-transform: capitalize;
+}
+.pagination .page,
+.pagination .next_page span,
+.pagination .prev_page span {
+  background: none repeat scroll 0 0 #FFFFFF;
+  border: 1px solid #939393;
+  color: #CF2A10;
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 14px;
+  line-height: 16px;
+  margin-left: 5px;
+  padding: 3px 0;
+  text-align: center;
+  text-decoration: none;
+  width: 20px;
+}
+.pagination .next_page span,
+.pagination .prev_page span {
+  font-family: Arial,sans-serif;
+  padding: 2px 0 4px;
+}
+.pagination .pages .page {
+  float: none;
+  position: absolute;
+}
+.pagination .next_page:hover,
+.pagination .prev_page:hover {
+  text-decoration: underline;
+}
+.pagination .next_page span {
+  margin-right: 10px;
+}
+.pagination .next_page label,
+.pagination .prev_page label {
+  float: left;
+  cursor: pointer;
+}
+.pagination .three-digit {
+  font-size: 11px;
+  line-height: 150%;
+}
+.pagination .page:hover,
+.pagination .page:active,
+.pagination .next_page:hover span,
+.pagination .prev_page:hover span {
+  background: none repeat scroll 0 0 #EEEEEE;
+}
+.pagination .selected,
+.pagination .page.selected:hover,
+.pagination .page.selected:active {
+  background: none repeat scroll 0 0 #444444;
+  color: #FFFFFF;
+  cursor: default;
+}
+.pagination .disabled {
+  opacity: 0.3;
+}
+.pagination .disabled,
+.pagination .disabled span,
+.pagination .disabled label,
+.pagination .disabled a {
+  cursor: default;
+  text-decoration: none;
+}
+.pagination .separator {
+  color: #CF2A10;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  text-align: right;
+  vertical-align: bottom;
+  width: 15px;
+}
+.pagination .pages_container {
+  float: left;
+  height: 26px;
+  overflow: hidden;
+  position: relative;
+  width: 135px;
+}
+.pagination .pages {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.pagination .letters .page, 
+.pagination .ranges .page {
+  float: left;
+  margin-left: 0;
+  margin-right: 7px;
+  position: static;
+  text-transform: capitalize;
+}
+.pagination .letters, 
+.pagination .ranges {
+  margin-bottom: 10px;
+}
+.pagination .ranges .page {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: auto;
+}
